@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback5.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 2,
+    "speaker_map": {
+      "SPEAKER_00": "S0",
+      "SPEAKER_01": "S1"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 0.12,
+      "end": 0.99,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "и напиток ссссс",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 1.33,
+      "end": 5.48,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "давайте я заплачу за заказ следующего парня оформите как предоплату",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 5.55,
+      "end": 6.98,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "надо же какой вы щедрый ищите в",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 7.07,
+      "end": 9.95,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "а-то кто знает может следующий сделает так же что и не будет ни в коем",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 9.95,
+      "end": 11.71,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "готово хорошего вам дня си вярнется",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 15.96,
+      "end": 19.98,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "стойте нет не смейте пустите меня первым мне очень надо ваше время",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}

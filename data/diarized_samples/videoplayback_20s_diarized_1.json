@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback7.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 3,
+    "speaker_map": {
+      "SPEAKER_01": "S0",
+      "SPEAKER_02": "S1",
+      "SPEAKER_00": "S2"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 1.03,
+      "end": 2.04,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "места стоять",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 2.04,
+      "end": 4.35,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_02",
+      "text": "эндрю нет нет меня зовут элли виллберн",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 4.67,
+      "end": 5.79,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_02",
+      "text": "эдвард деннилс",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 6.12,
+      "end": 8.08,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_02",
+      "text": "здесь патроны есть я повесу чувствую ааа",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 8.25,
+      "end": 10.88,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "ясно а это твои оружие маршал ты уверен там",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 10.71,
+      "end": 14.02,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_02",
+      "text": "там слева мои инициалы она свалится рапина от пуля яс",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0007",
+      "start": 14.21,
+      "end": 16.67,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_02",
+      "text": "и на этот раз вы мне может не вынете но ты",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0008",
+      "start": 16.47,
+      "end": 19.93,
+      "speaker": "S2",
+      "speaker_raw": "SPEAKER_00",
+      "text": "ну так стреляй потому что лишь так ты сможешь удрать сострова",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}

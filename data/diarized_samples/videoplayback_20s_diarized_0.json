@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 3,
+    "speaker_map": {
+      "SPEAKER_01": "S0",
+      "SPEAKER_00": "S1",
+      "SPEAKER_02": "S2"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 0.18,
+      "end": 0.82,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "безумец",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 1.09,
+      "end": 2.26,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "но вменяемый",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 2.56,
+      "end": 8.01,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "на прошлой неделе хотел бежать реанимировал скоро разве ах-ах",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 9.03,
+      "end": 10.11,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "это мой парень",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 13.41,
+      "end": 15.05,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "четние испортили таторушка",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 15.34,
+      "end": 16.57,
+      "speaker": "S2",
+      "speaker_raw": "SPEAKER_02",
+      "text": "человек-то видел мистера мердор?",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0007",
+      "start": 16.57,
+      "end": 18.44,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "знак батальона рейнджера",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0008",
+      "start": 18.68,
+      "end": 19.81,
+      "speaker": "S2",
+      "speaker_raw": "SPEAKER_02",
+      "text": "миндор мертв",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}

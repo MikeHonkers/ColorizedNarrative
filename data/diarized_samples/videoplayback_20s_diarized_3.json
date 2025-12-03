@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback3.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 3,
+    "speaker_map": {
+      "SPEAKER_01": "S0",
+      "SPEAKER_00": "S1",
+      "SPEAKER_02": "S2"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 0.23,
+      "end": 1.6,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "а друг мою все-таки заражено в шок",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 1.89,
+      "end": 2.92,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "но раз бы уже не стало",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 3.17,
+      "end": 4.32,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "нет никакого заражения",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 4.99,
+      "end": 5.77,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "все это ложь идиота вон",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 8.16,
+      "end": 8.62,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "ээ",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 9.4,
+      "end": 9.95,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "не знаю",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0007",
+      "start": 11.07,
+      "end": 11.93,
+      "speaker": "S2",
+      "speaker_raw": "SPEAKER_02",
+      "text": "да она живая не встала и на д",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0008",
+      "start": 13.48,
+      "end": 14.26,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "объясни нам матча",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0009",
+      "start": 14.61,
+      "end": 15.49,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "почему они нам врут?",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0010",
+      "start": 15.76,
+      "end": 17.28,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "чтобы вы не узнали кто он на самом деле",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0011",
+      "start": 17.61,
+      "end": 18.49,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "на самом деле",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0012",
+      "start": 18.63,
+      "end": 19.47,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "и кто же мы?",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0013",
+      "start": 19.5,
+      "end": 19.98,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "но хорошо",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}
