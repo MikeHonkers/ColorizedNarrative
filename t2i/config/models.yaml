@@ -1,0 +1,19 @@
+models:
+  flux:
+    base_model: "black-forest-labs/FLUX.1-dev"
+    local_path: "models/flux_1_dev"
+    dtype: "bfloat16"
+    
+  sdxl:
+    base_model: "stabilityai/stable-diffusion-xl-base-1.0"
+    local_path: "models/sdxl_base"
+    vae_model: "madebyollin/sdxl-vae-fp16-fix"
+    vae_local_path: "models/sdxl_vae"
+    dtype: "float16"
+
+dataset:
+  name: "MikeHonkers/Images-ru_cap-13k"
+  local_path: "data/raw/dataset"
+  image_column: "image"
+  caption_column: "caption"
+
