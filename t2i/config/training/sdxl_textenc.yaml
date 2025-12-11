@@ -1,0 +1,42 @@
+model:
+  name: "sdxl"
+  pretrained_model_path: "models/sdxl_base"
+  pretrained_vae_path: "models/sdxl_vae"
+  
+dataset:
+  path: "data/raw/dataset"
+  image_column: "image"
+  caption_column: "caption"
+  resolution: 1024
+
+training:
+  train_batch_size: 32
+  gradient_accumulation_steps: 1
+  num_train_epochs: 4
+  learning_rate: 1.0e-4
+  text_encoder_lr: 5.0e-6
+  train_text_encoder: true
+  lr_scheduler: "constant"
+  lr_warmup_steps: 0
+  mixed_precision: "bf16"
+  allow_tf32: true
+  use_8bit_adam: true
+  gradient_checkpointing: true
+  dataloader_num_workers: 8
+  random_flip: true
+  seed: 42
+  validation_prompt: "фотография городской жизни: люди на улице, здания и машины на заднем плане."
+  num_validation_images: 4
+  validation_epochs: 4
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+
+output:
+  output_dir: "experiments/runs/sdxl-ru-13k-lora-h100-textenc-diff_lr"
+  logging_dir: "experiments/logs/sdxl/sdxl-ru-13k-lora-h100-textenc"
+  checkpointing_steps: 1000
+  report_to: "tensorboard"
+

@@ -1,0 +1,16 @@
+prompts:
+  english: "A black-and-white image of a staircase with trash on it."
+  russian: "Черно-белое изображение лестницы, на которой лежит мусор."
+
+generation:
+  flux:
+    num_inference_steps: 30
+    guidance_scale: 3.5
+  sdxl:
+    num_inference_steps: 30
+    guidance_scale: 5.0
+
+output:
+  flux_dir: "experiments/images/flux"
+  sdxl_dir: "experiments/images/sdxl"
+
