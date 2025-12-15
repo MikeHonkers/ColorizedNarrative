@@ -7,6 +7,7 @@ Fine-tune Flux and SDXL models using LoRA.
 ```bash
 bash setup.sh
 python -m src.data.download
+python -m src.data.translate
 python -m src.models.prepare_flux
 python -m src.models.prepare_sdxl
 ```
@@ -16,8 +17,12 @@ python -m src.models.prepare_sdxl
 ```bash
 ./scripts/train_flux.sh base
 ./scripts/train_flux.sh textenc
+./scripts/train_flux.sh base_en
+./scripts/train_flux.sh textenc_en
 ./scripts/train_sdxl.sh base
 ./scripts/train_sdxl.sh textenc
+./scripts/train_sdxl.sh base_en
+./scripts/train_sdxl.sh textenc_en
 ```
 
 ## Inference

@@ -16,4 +16,5 @@ dataset:
   local_path: "data/raw/dataset"
   image_column: "image"
   caption_column: "caption"
+  caption_column_en: "caption_en"
 
