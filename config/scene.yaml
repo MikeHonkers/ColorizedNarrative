@@ -1,0 +1,7 @@
+model_id: "Qwen/Qwen2.5-3B-Instruct"
+max_new_tokens: 256
+max_prompt_len: 77
+input_path: "data/diarized_samples"
+output_path: "data/scene_outputs"
+limit: 0
+device: "mps"
