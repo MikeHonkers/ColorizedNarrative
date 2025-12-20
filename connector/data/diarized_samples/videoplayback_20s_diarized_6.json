@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback6.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 2,
+    "speaker_map": {
+      "SPEAKER_00": "S0",
+      "SPEAKER_01": "S1"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 0.13,
+      "end": 0.59,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "чаоаннлл",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 1.48,
+      "end": 1.84,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "как?",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 2.61,
+      "end": 5.06,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "какая разница перенесите нас отсюда скорее ааааа",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 5.55,
+      "end": 6.17,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_00",
+      "text": "мы не можем",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 9.43,
+      "end": 11.39,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "вони сказали мама можно и так далее все это было в течение года",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 11.71,
+      "end": 12.65,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "сэмдин",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0007",
+      "start": 13.01,
+      "end": 13.72,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "рад вас видеть",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0008",
+      "start": 14.46,
+      "end": 15.05,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "бэлдор",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0009",
+      "start": 15.71,
+      "end": 16.37,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "не надо это не нужно",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0010",
+      "start": 16.86,
+      "end": 18.32,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "думаешь вы хозяева планеты и рамкинг",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0011",
+      "start": 19.0,
+      "end": 19.98,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_01",
+      "text": "кто дает вам право",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}
