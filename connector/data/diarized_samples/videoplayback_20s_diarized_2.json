@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "language": "ru",
+  "meta": {
+    "source": "videoplayback2.m4a",
+    "sample_rate": 16000,
+    "duration": 20.0,
+    "num_speakers": 2,
+    "speaker_map": {
+      "SPEAKER_01": "S0",
+      "SPEAKER_00": "S1"
+    },
+    "asr_model": "openai/whisper-small",
+    "diarization_model": "pyannote/speaker-diarization-3.1"
+  },
+  "segments": [
+    {
+      "id": "seg_0001",
+      "start": 0.74,
+      "end": 3.41,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "извините помогите мне у меня шина сэлдон и роман",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0002",
+      "start": 3.42,
+      "end": 5.94,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "очень жаль но мне пора я могу опоздать что-то не так",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0003",
+      "start": 5.94,
+      "end": 8.43,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "что лучше опоздать и умереть?аааа аааа",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0004",
+      "start": 8.97,
+      "end": 9.94,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "не советую детка",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0005",
+      "start": 9.94,
+      "end": 10.93,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "вы иди из тачки",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0006",
+      "start": 12.84,
+      "end": 13.41,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "ууу",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0007",
+      "start": 13.77,
+      "end": 15.07,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "давайте ребята",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0008",
+      "start": 15.08,
+      "end": 16.15,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "а ну пошли",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0009",
+      "start": 16.38,
+      "end": 18.21,
+      "speaker": "S1",
+      "speaker_raw": "SPEAKER_00",
+      "text": "аккуратнее совсем новое",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    },
+    {
+      "id": "seg_0010",
+      "start": 18.51,
+      "end": 19.98,
+      "speaker": "S0",
+      "speaker_raw": "SPEAKER_01",
+      "text": "нуль проблем стой иди влезай садись",
+      "conf": null,
+      "n_best": [],
+      "uncertain_spans": []
+    }
+  ]
+}
