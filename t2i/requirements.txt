@@ -1,0 +1,16 @@
+torch>=2.2
+torchvision
+transformers
+diffusers
+accelerate
+peft
+bitsandbytes
+xformers
+safetensors
+datasets
+pillow
+pyyaml
+tensorboard
+wandb
+tqdm
+

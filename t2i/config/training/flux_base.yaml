@@ -1,0 +1,36 @@
+model:
+  name: "flux"
+  pretrained_model_path: "models/flux_1_dev"
+  
+dataset:
+  path: "data/raw/dataset"
+  image_column: "image"
+  caption_column: "caption"
+  resolution: 1024
+
+training:
+  instance_prompt: "реалистичная фотография сцены из городской жизни"
+  train_batch_size: 16
+  gradient_accumulation_steps: 1
+  num_train_epochs: 3
+  learning_rate: 1.0e-4
+  lr_scheduler: "constant"
+  lr_warmup_steps: 0
+  guidance_scale: 3.5
+  mixed_precision: "bf16"
+  allow_tf32: true
+  gradient_checkpointing: true
+  dataloader_num_workers: 12
+  seed: 42
+
+lora:
+  rank: 8
+  alpha: 16
+  dropout: 0.0
+
+output:
+  output_dir: "experiments/runs/flux-ru-13k-lora-h100"
+  logging_dir: "experiments/logs/flux/flux-ru-13k-lora-h100"
+  checkpointing_steps: 1000
+  report_to: "tensorboard"
+
