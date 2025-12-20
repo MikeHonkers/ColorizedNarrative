@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-
 from __future__ import annotations
 
 """
@@ -12,7 +8,6 @@ Whisper-small/base + PEFT/LoRA на SOVA-audiobooks-100k
 """
 
 import os, re, io, json, random
-from typing import List, Dict
 
 
 import argparse
