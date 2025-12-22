@@ -17,7 +17,10 @@ with open("speech.wav", "rb") as f:
 print(response.json())
 ``` 
 In response there will be list of base64-encoded images.
-Web-UI in progress...
+
+OR you can:
+1. Docker compose up -d
+2. Go to server_name="127.0.0.1", server_port=7860 and use WebGUI
 
 ## Промежуточный отчёт команды:
 

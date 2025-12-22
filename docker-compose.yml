@@ -119,6 +119,13 @@ services:
           devices:
             - driver: nvidia
               capabilities: [gpu]
+
+  gradio-client:
+    build: ./gradio_app
+    ports:
+      - "7860:7860"
+    depends_on:
+      - asr
               
 
 volumes:
