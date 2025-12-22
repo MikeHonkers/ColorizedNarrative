@@ -1,0 +1,23 @@
+name: "text_encoder"
+platform: "onnxruntime_onnx"
+max_batch_size: 1
+input [
+  {
+    name: "input_ids"
+    data_type: TYPE_INT64
+    dims: [1, 77]
+  }
+]
+output [
+  {
+    name: "last_hidden_state"
+    data_type: TYPE_FP32
+    dims: [1, 77, 768]
+  }
+]
+instance_group [
+  {
+    kind: KIND_GPU
+    count: 1
+  }
+]

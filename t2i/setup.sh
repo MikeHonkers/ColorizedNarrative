@@ -17,10 +17,10 @@ cd diffusers
 pip install -e .
 cd ..
 
-pip install -r requirements.txt
+pip install -r requirements_og.txt
 
 cd diffusers/examples/text_to_image
-pip install -r requirements.txt
+pip install -r requirements_og.txt
 if [ -f "requirements_sdxl.txt" ]; then
     pip install -r requirements_sdxl.txt
 fi

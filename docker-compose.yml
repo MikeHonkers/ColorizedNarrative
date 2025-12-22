@@ -1,0 +1,132 @@
+version: '3.8'
+
+services:
+  model-loader:
+    image: amazon/aws-cli:latest
+    env_file:
+      - .env
+    volumes:
+      - models-volume:/models
+      - ./asr:/asr-config
+      - ./connector:/connector-config
+      - ./t2i:/t2i-config
+    working_dir: /models
+    command: >
+      s3 sync s3://m.pavlov/multimodal/triton-whisper/ /models/whisper/ &&
+      cp /asr-config/whisper_encoder_config.pbtxt /models/whisper/whisper_encoder/config.pbtxt || true &&
+      cp /asr-config/whisper_decoder_config.pbtxt /models/whisper/whisper_decoder/config.pbtxt || true &&
+
+      huggingface-cli download aamocualg-hse/qwen2.5-3b-instruct-onnx --local-dir /models/qwen &&
+      mkdir -p /models/qwen/1 &&
+      mv /models/qwen/model.onnx /models/qwen/model.onnx_data /models/qwen/1/ 2>/dev/null || true &&
+      cp /connector-config/qwen_config.pbtxt /models/qwen/config.pbtxt || true &&
+
+      huggingface-cli download aamocualg-hse/sdxl-onnx --local-dir /models/sdxl &&
+      mkdir -p /models/sdxl/unet/1 /models/sdxl/text_encoder/1 /models/sdxl/text_encoder_2/1 /models/sdxl/vae_decoder/1 &&
+      mv /models/sdxl/unet/model.onnx* /models/sdxl/unet/1/ 2>/dev/null || true &&
+      mv /models/sdxl/text_encoder/model.onnx* /models/sdxl/text_encoder/1/ 2>/dev/null || true &&
+      mv /models/sdxl/text_encoder2/model.onnx* /models/sdxl/text_encoder2/1/ 2>/dev/null || true &&
+      mv /models/sdxl/vae_decoder/model.onnx* /models/sdxl/vae_decoder/1/ 2>/dev/null || true &&
+      cp /t2i-config/triton-configs/text_encoder_config.pbtxt /models/sdxl/text_encoder/config.pbtxt || true &&
+      cp /t2i-config/triton-configs/text_encoder_2_config.pbtxt /models/sdxl/text_encoder_2/config.pbtxt || true &&
+      cp /t2i-config/triton-configs/unet_config.pbtxt /models/sdxl/unet/config.pbtxt || true &&
+      cp /t2i-config/triton-configs/vae_decoder_config.pbtxt /models/sdxl/vae_decoder/config.pbtxt || true &&
+
+      echo 'All Triton models and configs ready'
+
+  asr:
+    build: ./asr
+    depends_on:
+      - connector
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./asr:/app
+      - models-volume:/models
+    env_file:
+      - .env
+    environment:
+      - TRITON_URL=http://triton:8000
+      - HF_TOKEN=${HF_TOKEN}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+
+  triton-server:
+    image: nvcr.io/nvidia/tritonserver:24.11-py3
+    runtime: nvidia
+    depends_on:
+      - model-loader
+    ports:
+      - "8000:8000"
+    volumes:
+      - model-volume:/models
+    env_file:
+      - .env
+    command:
+      - tritonserver
+      - --model-repository=/models
+      - --model-control-mode=explicit
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+
+  connector:
+    build: ./connector
+    depends_on:
+      - t2i
+    ports:
+      - "5001:5001"
+    volumes:
+      - models-volume:/models
+      - ./connector:/app
+    env_file:
+      - .env
+    environment:
+      - TRITON_URL=http://triton:8000
+      - HF_TOKEN=${HF_TOKEN}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+
+  
+  t2i:
+    build: ./t2i
+    ports:
+      - "5002:5002"
+    volumes:
+      - models-volume:/models
+      - ./t2i:/app
+    environment:
+      - TRITON_URL=http://triton:8000
+    depends_on:
+      - model-loader
+      - triton-server
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+
+  gradio-client:
+    build: ./gradio_app
+    ports:
+      - "7860:7860"
+    depends_on:
+      - asr
+              
+
+volumes:
+  models-volume:
