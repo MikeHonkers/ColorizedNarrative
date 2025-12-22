@@ -1,5 +1,24 @@
 # ColorizedNarrative
 
+## Quickstart:
+1. Docker compose up -d
+2. Now you can send HTML POST on '0.0.0.0', port=5000:
+```python
+import requests
+
+url = "http://localhost:5000/asr"
+
+with open("speech.wav", "rb") as f:
+    files = {
+        "audio": f
+    }
+    response = requests.post(url, files=files)
+
+print(response.json())
+``` 
+In response there will be list of base64-encoded images.
+Web-UI in progress...
+
 ## Промежуточный отчёт команды:
 
 ### Алексей Павлов.

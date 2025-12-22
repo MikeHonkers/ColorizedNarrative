@@ -1,0 +1,6 @@
+Flask==3.0.3
+pyannote.audio==4.0.3
+optimum[onnxruntime-gpu]==2.0.0 # optimum[onnxruntime]==2.0.0
+onnxruntime-gpu==1.23.2 # onnxruntime==1.23.2
+torchvision==0.23.0
+tritonclient[http]==2.63.0

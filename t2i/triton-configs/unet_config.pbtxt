@@ -1,0 +1,39 @@
+name: "unet"
+platform: "onnxruntime_onnx"
+max_batch_size: 1
+input [
+  {
+    name: "sample"
+    data_type: TYPE_FP32
+    dims: [1, 4, -1, -1]
+  },
+  {
+    name: "timestep"
+    data_type: TYPE_INT64
+    dims: [1]
+  },
+  {
+    name: "encoder_hidden_states"
+    data_type: TYPE_FP32
+    dims: [1, 77, 2048]
+  },
+  {
+    name: "text_embeds"
+    data_type: TYPE_FP32
+    dims: [1, 1280]
+    optional: true
+  }
+]
+output [
+  {
+    name: "latent"
+    data_type: TYPE_FP32
+    dims: [1, 4, -1, -1]
+  }
+]
+instance_group [
+  {
+    kind: KIND_GPU
+    count: 1
+  }
+]
